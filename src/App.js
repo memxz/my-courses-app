@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Course from './Course';
+import ListCourse from './ListCourse';
 
 function App() {
+ 
+  const myCourseList = [{
+    id:'1',
+    code : 'FOPCS',
+    name :'Fundamental of Programming in c sharp',
+    description :'FOPCS description'
+  },
+
+  {
+    id:'2',
+    code : 'oopcs',
+    name: 'object oriented programming',
+    description :'OOPCS description'
+  }
+];
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>my course list</h1>
+      <ListCourse myCourseList={myCourseList} />
+
+
     </div>
   );
 }
